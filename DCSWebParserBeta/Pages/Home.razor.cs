@@ -48,8 +48,7 @@ namespace DCSWebParserBeta.Pages
 				UpdateSettings();
 
 				// Load mtdef file
-				HttpClient client = new HttpClient();
-				Stream stream = await client.GetStreamAsync(_filePath + "/" + _mtdefFileName);
+				Stream stream = await Http.GetStreamAsync(_filePath + "/" + _mtdefFileName);
 				MtDef.LoadXDocument(XDocument.Load(stream));
 
 				ReportOutput.ParseBeginTime = DateTime.Now;
@@ -120,7 +119,7 @@ namespace DCSWebParserBeta.Pages
 			string file = string.Empty;
 			IExport fileExport;
 
-			await _dcsFile.OpenReadStream(maxSize).ReadAsync(buffer);
+			await _dcsFile.OpenReadStream(maxSize).ReadExactlyAsync(buffer);
 
 			MemoryStream dcsStream = new MemoryStream(buffer);
 
