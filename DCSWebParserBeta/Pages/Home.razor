@@ -6,6 +6,12 @@
 <script src="scripts/download.js"></script>
 <h3>DCS Web Parser BETA Version</h3>
 
+@if (_errorMessage != String.Empty)
+{
+	<Callout Type="CalloutType.Danger" Heading="Error">
+		<strong>Error parsing file: </strong>_errorMessage.
+	</Callout>
+}
 <h3>@_errorMessage</h3>
 
 <div class="row mb-1">

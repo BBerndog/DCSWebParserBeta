@@ -87,19 +87,6 @@ namespace DCSWebParserBeta.Pages
 		private void OnFileSelectionChange(InputFileChangeEventArgs e)
 		{
 			_dcsFile = e.File;
-
-			/*string fileName = Path.GetFileNameWithoutExtension(e.File.Name);
-
-			switch (cboOutputFile.ToString())
-			{
-				case "HTML":
-					txtFilename = fileName + ".html";
-					break;
-				case "Text":
-				default:
-					txtFilename = fileName + ".txt";
-					break;
-			}*/
 		}
 
 		private async Task LoadFile(InputFileChangeEventArgs e)

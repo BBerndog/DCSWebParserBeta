@@ -1,0 +1,38 @@
+﻿@page "/report"
+
+<PageTitle>Report</PageTitle>
+
+<h1>Report</h1>
+
+<h2>Total Parsing Time: @ReportOutput.ParseEndTime.Subtract(ReportOutput.ParseBeginTime).TotalSeconds seconds</h2>
+<h3>Number of line processed: @ReportOutput.TotalNumberOfLines</h3>
+<h3>Number of errors during parsing: @ReportOutput.TotalNumberOfParsingErrors</h3>
+
+<CardGroup>
+	@foreach (ReportCard reportCard in ReportCards)
+	{
+		<Card Class="mb-4" Style="width:18rem;">
+			<CardHeader>@reportCard.Title</CardHeader>
+			<CardBody>
+				<CardTitle>Total: @reportCard.LineNumbers.Count</CardTitle>
+				<CardText>
+					<ul class="list-group list-group-flush">
+						@foreach (long line in reportCard.LineNumbers)
+						{
+							<li class="list-group-item">@line.ToString()</li>
+						}
+					</ul>
+				</CardText>
+			</CardBody>
+		</Card>
+	}
+</CardGroup>
+
+<p>Parsing started at: @ReportOutput.ParseBeginTime.ToLongTimeString()</p>
+<p>Parsing ended at: @ReportOutput.ParseEndTime.ToLongTimeString()</p>
+<p>Total Parsing Time: @ReportOutput.ParseEndTime.Subtract(ReportOutput.ParseBeginTime).TotalSeconds seconds</p>
+<p>Exporting started at: @ReportOutput.ExportBeginTime.ToLongTimeString()</p>
+<p>Exporting ended at: @ReportOutput.ExportEndTime.ToLongTimeString()</p>
+<p>Total Exporting Time: @ReportOutput.ExportEndTime.Subtract(ReportOutput.ExportBeginTime).TotalSeconds seconds</p>
+
+<p>@ReportOutput.ErrorMessage</p>

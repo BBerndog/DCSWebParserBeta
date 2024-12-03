@@ -1,0 +1,59 @@
+﻿@page "/features"
+
+<PageTitle>Features</PageTitle>
+
+<h1>Beta Features</h1>
+
+<Callout Color="CalloutColor.Warning" Heading="Important">
+	<h4>This site has not been optimized</h4>.
+	<p>The initial effort in this beta version has been for functionality. No multi-threading/processing has been implemented at this time.</p>
+	<p>Expect the rendering of a file to take upwards of 25 minutes (or not completing without an error if the file is too big).</p>
+</Callout>
+
+<Callout Color="CalloutColor.Info" Heading="Additional Information">
+	<h4>Use the Begin and End times if possible</h4>
+	<p>Using those will significantly reduce the time waiting for the file to render.</p>
+</Callout>
+
+<Accordion>
+	<AccordionItem>
+		<TitleTemplate>
+			<Icon Name="IconName.Brush" Class="me-1" /> File Types
+		</TitleTemplate>
+		<Content>
+			<p>Users have the option of parsing the file as either a text or html file. After the file is complete, the browser will download it.</p>
+		</Content>
+	</AccordionItem>
+	<AccordionItem>
+		<TitleTemplate>
+			<Icon Name="IconName.Palette" Class="me-1" /> Coloring
+		</TitleTemplate>
+		<Content>
+			<p>When rendering as HTML, all TIM's will be colored green, TICO's as red and APS's as gold. All timestamps and system messages will be color-coded as well.</p>
+		</Content>
+	</AccordionItem>
+	<AccordionItem>
+		<TitleTemplate>
+			<Icon Name="IconName.Filter" Class="me-1" /> Filtering
+		</TitleTemplate>
+		<Content>
+			<p>When rendering a file, filters can be applied to only show TIM's, TICO's, APS's, and a specific time range. In addition, raw data such as hexadecimal values and blank lines can also be filtered out.</p>
+		</Content>
+	</AccordionItem>
+	<AccordionItem>
+		<TitleTemplate>
+			<Icon Name="IconName.Palette2" Class="me-1" /> Dark Mode
+		</TitleTemplate>
+		<Content>
+			<p>When rendering as HTML, selecting this option will export the html with a dark background</p>
+		</Content>
+	</AccordionItem>
+	<AccordionItem>
+		<TitleTemplate>
+			<Icon Name="IconName.CardList" Class="me-1" /> Summary Report
+		</TitleTemplate>
+		<Content>
+			<p>Once a file is parsed, a report will display potentially important events and their timestamp/line number in a report. As of now these include backouts and illegal exits.</p>
+		</Content>
+	</AccordionItem>
+</Accordion>
