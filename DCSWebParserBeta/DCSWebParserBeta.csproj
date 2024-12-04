@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Content Update="wwwroot\resources\T2unicMTD.mtdef">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

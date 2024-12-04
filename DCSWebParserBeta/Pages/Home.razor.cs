@@ -44,6 +44,7 @@ namespace DCSWebParserBeta.Pages
 			if (_dcsFile == null) return;
 
 			int apple = 0;
+			string relativePath = _filePath + "/" + _mtdefFileName;
 
 			try
 			{
@@ -51,7 +52,7 @@ namespace DCSWebParserBeta.Pages
 				apple = 1;
 
 				// Load mtdef file
-				Stream stream = await Http.GetStreamAsync(_filePath + "/" + _mtdefFileName);
+				Stream stream = await Http.GetStreamAsync(relativePath);
 				apple = 2;
 				MtDef.LoadXDocument(XDocument.Load(stream));
 				apple = 3;
@@ -76,7 +77,7 @@ namespace DCSWebParserBeta.Pages
 			catch (Exception ex)
 			{
 				ReportOutput.ErrorMessage = ex.Message;
-				_errorMessage = "Error: " + ex.Message + ", apple = " + apple.ToString();
+				_errorMessage = ex.Message + ", relativePath = " + relativePath + ", apple = " + apple.ToString();
 			}
 		}
 
