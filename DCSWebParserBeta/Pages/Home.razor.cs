@@ -43,22 +43,31 @@ namespace DCSWebParserBeta.Pages
 		{
 			if (_dcsFile == null) return;
 
+			int apple = 0;
+
 			try
 			{
 				UpdateSettings();
+				apple = 1;
 
 				// Load mtdef file
 				Stream stream = await Http.GetStreamAsync(_filePath + "/" + _mtdefFileName);
+				apple = 2;
 				MtDef.LoadXDocument(XDocument.Load(stream));
-
+				apple = 3;
 				ReportOutput.ParseBeginTime = DateTime.Now;
+				apple = 4;
 				MemoryStream outputStream = await ParseDCSFile();
+				apple = 5;
 				ReportOutput.ParseEndTime = DateTime.Now;
+				apple = 6;
 
 				// Save file
 				ReportOutput.ExportBeginTime = DateTime.Now;
 				using DotNetStreamReference streamRef = new DotNetStreamReference(stream: outputStream);
+				apple = 7;
 				await JS.InvokeVoidAsync("downloadFileFromStream", GetOutputFileName(), streamRef);
+				apple = 8;
 				ReportOutput.ExportEndTime = DateTime.Now;
 
 				// Redirect to report page
@@ -67,7 +76,7 @@ namespace DCSWebParserBeta.Pages
 			catch (Exception ex)
 			{
 				ReportOutput.ErrorMessage = ex.Message;
-				_errorMessage = "Error: " + ex.Message;
+				_errorMessage = "Error: " + ex.Message + ", apple = " + apple.ToString();
 			}
 		}
 
