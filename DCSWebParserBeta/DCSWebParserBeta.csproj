@@ -25,6 +25,9 @@
     <Content Update="wwwroot\resources\T2unicMTD.mtdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="wwwroot\scripts\T2unicMTD.mtdef">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
