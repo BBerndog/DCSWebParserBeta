@@ -20,99 +20,70 @@
 	</div>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">File Name: </label>
-	<div class="col-md-3">
+	<label class="col-md-3 col-form-label">File Name:
 		<input id="txtFilename" type="text" @bind="txtFilename" />
-	</div>
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Begin Time: </label>
-	<div class="col-md-3">
+	<label class="col-md-3 col-form-label">Begin Time:
 		<TimeInput TValue="TimeOnly" @bind-Value="@_beginTime" />
-	</div>
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">End Time: </label>
-	<div class="col-md-3">
+	<label class="col-md-3 col-form-label">End Time:
 		<TimeInput TValue="TimeOnly" @bind-Value="@_endTime" />
-	</div>
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show Line Numbers: </label>
-	<div class="col-md-4">
+	<label class="col-md-3 col-form-label">Show Line Numbers:
 		<Switch Class="mt-3" @bind-Value="chkLineNumbers" />
-	</div>
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show Timestamps as 24 Hours: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chk24Hours" />
-	</div>
+	<label class="col-md-3 col-form-label">Show Timestamps as 24 Hours:
+        <Switch Class="mt-2" @bind-Value="chk24Hours" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show Raw Data: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkShowRawData" />
-	</div>
+	<label class="col-md-3 col-form-label">Show Raw Data:
+        <Switch Class="mt-2" @bind-Value="chkShowRawData" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show System Messages: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkShowSystemMessages" />
-	</div>
+	<label class="col-md-3 col-form-label">Show System Messages:
+        <Switch Class="mt-2" @bind-Value="chkShowSystemMessages" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show TIMs: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkTIM" />
-	</div>
+	<label class="col-md-3 col-form-label">Show TIMs:
+        <Switch Class="mt-2" @bind-Value="chkTIM" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show TICOs: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkTICO" />
-	</div>
+	<label class="col-md-3 col-form-label">Show TICOs:
+        <Switch Class="mt-2" @bind-Value="chkTICO" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Show APSs: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkAPS" />
-	</div>
+	<label class="col-md-3 col-form-label">Show APSs:
+        <Switch Class="mt-2" @bind-Value="chkAPS" />
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Output File Type: </label>
-	<div class="col-md-3">
-		<select id="cboOutputFile" @bind="cboOutputFile">
-			<option selected>HTML</option>
-			<option>Text</option>
-		</select>
-	</div>
+	<label class="col-md-3 col-form-label">Output File Type:
+        <select id="cboOutputFile" @bind="cboOutputFile">
+            <option selected>HTML</option>
+            <option>Text</option>
+        </select>
+	</label>
 </div>
 <div class="row mb-1">
-	<label class="col-md-3 col-form-label">Dark Mode: </label>
-	<div class="col-md-3">
-		<Switch Class="mt-2" @bind-Value="chkDarkMode" />
-	</div>
+	<label class="col-md-3 col-form-label">Dark Mode:
+        <Switch Class="mt-2" @bind-Value="chkDarkMode" />
+	</label>
 </div>
 <div class="row">
 	<div class="col-md-1 text-right">
 		<Button Type="ButtonType.Button" Color="ButtonColor.Primary" Class="float-end me-2" @onclick="OnParseClick">Parse</Button>
 	</div>
 </div>
-@* <div class="container">
-	<div class="container">
-		<strong>
-			@_statusMessage
-		</strong>
-	</div>
-	<div class="percentage">
-		<strong>
-			<p>Percentage: @_percentageUploaded %</p>
-		</strong>
-	</div>
-	<label>
-		Uploading document: <progress value="70" max="100">70 %</progress>
-	</label>
-	<label for="progress-bar">Uploading Document</label>
-	<progress id="progress-bar" value="70" max="100">70 %</progress>
-</div> *@
