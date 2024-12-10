@@ -18,10 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\resources\T2unicMTD.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Update="wwwroot\scripts\T2unicMTD.xml">
+    <Content Update="wwwroot\resources\T2unicMTD.mtdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
